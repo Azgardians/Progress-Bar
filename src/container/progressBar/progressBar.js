@@ -13,10 +13,10 @@ class ProgressBar extends Component {
                     <rect x="349" width="299" height="59" fill="#FBE44D"/>
                 </svg>
                 <label className="labels">
-                    <p className="firstValue"> 0.1 </p>
-                    <p className="secondValue">0.5</p>
-                    <p className="thirdValue">0.8</p>
-                    <p className="fourthValue">1.0</p>
+                    <p className="firstValue"> 0.5 </p>
+                    <p className="secondValue">0.8</p>
+                    <p className="thirdValue">1.0</p>
+                    <p className="fourthValue">1.5</p>
                 </label>
             </div>
         );
