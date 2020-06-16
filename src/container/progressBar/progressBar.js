@@ -6,7 +6,7 @@ class ProgressBar extends Component {
     render(){
         return(
             <div className="Bar">
-                <input type="range" min={this.props.min} max={this.props.max} readOnly={true} value={this.props.values}  step="1" className="slider" id="myRange" ></input>
+                <input type="range" min={this.props.min*100} max={this.props.max*100} readOnly={true} value={this.props.values}  step="1" className="slider" id="myRange" ></input>
                 <svg width="861" height="59" viewBox="0 0 861 59" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="648" width="213" height="59" fill="#EB3324"/>
                     <rect width="349" height="59" fill="#20D420"/>
