@@ -26,7 +26,7 @@ class App extends Component {
           min = {this.state.min}/>
           <label>
             ValuePointer:
-            <input placeholder="Enter between 1 to 100" onChange={this.changeHandler}  type="number"/>
+            <input placeholder="Enter between 0.5 to 1.5" onChange={this.changeHandler}  type="number"/>
           </label>
       </div>
     );
