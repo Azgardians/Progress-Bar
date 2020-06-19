@@ -9,7 +9,6 @@
 .slider {
   position: relative;
   -webkit-appearance: none;
-  width: 920px;
   height: 46.8px;
   background: transparent;
   outline: none;
@@ -32,7 +31,7 @@
 }
 
 .slider::-moz-range-thumb {
-  width: 77px;
+  width: 62px;
   height: 46.8px;
   background: url('../../Polygon\ 1.png');
   cursor: pointer;
@@ -40,23 +39,26 @@
 
 .labels{
   display: flex;
+  flex-direction: row;
+  align-self: flex-start;
   position: relative;  
   
 }
-
+ 
 .firstValue {
   position: absolute;
-  left: -435px;
+  left: 25px;
 }
+
 .secondValue {
   position: absolute;
-  left: -90px;
+  left: 100px;
 }
 .thirdValue {
   position: absolute;
-  left: 210px;
+  left: 570px;
 }
 .fourthValue {
   position: absolute;
-  left: 420px;
+  left: 880px;
 }

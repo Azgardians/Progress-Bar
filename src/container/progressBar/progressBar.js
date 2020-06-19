@@ -1,7 +1,7 @@
 import React , {Component} from 'react';
 import './progressBar.css';
 import Section from '../../components/sectionBar/sectionBar';
-import Label from '../Label/Label';
+// import Input from '../../components/Input/Input';
 
 
 class ProgressBar extends Component {
@@ -23,7 +23,6 @@ class ProgressBar extends Component {
         const response = await fetch(url);
         const dataBar = await response.json();
         console.log(dataBar);
-        console.log(dataBar.staticZones[0]);
         this.setState({
             items : dataBar,
             data : dataBar.currentValue,
@@ -31,35 +30,48 @@ class ProgressBar extends Component {
             max : dataBar.maxValue,
             labels : dataBar.staticLabels.labels,
             mainWidth : dataBar.mainWidth,
-            zones : dataBar.staticZones[0],
+            zones : dataBar.staticZones,
             mainHeight : dataBar.mainHeight,
             isLoaded : true
         });
     }
 
     changeHandler = (event) => {
-        const inputValue = event.target.value;
+        const inputValue = event.target.value
         this.setState({data : inputValue});
+    }
+    gettheWidth (max , min , mainWidth) {
+        const divisons = (this.state.max - this.state.min);
+        const difference = max - min;
+        let width = ((difference * mainWidth)/divisons)
+        return width;
     }
 
     render(){
         let sectionBar = <div><h3>Loading...</h3></div>
+        let currentData = (((this.state.data - this.state.min)*100)/(this.state.max - this.state.min)+1);
         if (this.state.isLoaded){
+            const sectorZones = this.state.zones.slice(0).reverse().map((zone , i) => {
+                return{
+                    start : 0,
+                    color : zone.strokeStyle,
+                    width : this.gettheWidth(zone.max , this.state.min , this.state.mainWidth),
+                }
+            })
             sectionBar = (
                 <Section 
-                    values={this.state.data}
+                    values={currentData}
                     max = {this.state.max}
                     min = {this.state.min}
                     section={this.state.labels}
                     mainWidth={this.state.mainWidth}
-                    firstZone={this.state.zones}
+                    sectionZones={sectorZones}
                     height={this.state.mainHeight}/>
             )
         }
         return(
             <div className="Bar">
                 {sectionBar}
-                <Label changeHandler={this.changeHandler}/>
             </div>
         );
     }
