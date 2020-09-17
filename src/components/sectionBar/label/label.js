@@ -6,7 +6,7 @@ const label = (props) => {
             
             {props.labels.map((label,i) =>(
                     <div key={i}>
-                        {console.log(props.position[3-i])}
+                        {/* {console.log(props.position[3-i])} */}
                         <p style={{marginLeft : `${props.position[3-i]}px`, position : 'absolute',top : '0'}}>
                             {label}
                         </p>

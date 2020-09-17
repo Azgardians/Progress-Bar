@@ -1,7 +1,7 @@
 import React , {Component} from 'react';
 import './progressBar.css';
 import Section from '../../components/sectionBar/sectionBar';
-// import Input from '../../components/Input/Input';
+import Input from '../../components/Input/Input';
 
 
 class ProgressBar extends Component {
@@ -22,7 +22,7 @@ class ProgressBar extends Component {
         const url = "https://ac8d418a-14cf-41a4-908a-4a803dc878ab.mock.pstmn.io/demo/bar";
         const response = await fetch(url);
         const dataBar = await response.json();
-        console.log(dataBar);
+        // console.log(dataBar);
         this.setState({
             items : dataBar,
             data : dataBar.currentValue,
@@ -72,6 +72,7 @@ class ProgressBar extends Component {
         return(
             <div className="Bar">
                 {sectionBar}
+                <Input changeHandler={this.changeHandler} />
             </div>
         );
     }
