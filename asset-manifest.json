@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Progress-Bar/static/css/main.2a3e40d3.chunk.css",
+    "main.js": "/Progress-Bar/static/js/main.b9a222fe.chunk.js",
+    "main.js.map": "/Progress-Bar/static/js/main.b9a222fe.chunk.js.map",
+    "runtime-main.js": "/Progress-Bar/static/js/runtime-main.6d74a99b.js",
+    "runtime-main.js.map": "/Progress-Bar/static/js/runtime-main.6d74a99b.js.map",
+    "static/js/2.5027ab54.chunk.js": "/Progress-Bar/static/js/2.5027ab54.chunk.js",
+    "static/js/2.5027ab54.chunk.js.map": "/Progress-Bar/static/js/2.5027ab54.chunk.js.map",
+    "index.html": "/Progress-Bar/index.html",
+    "precache-manifest.bd0c408ecd0c1a49ff3c8b24441cd4e2.js": "/Progress-Bar/precache-manifest.bd0c408ecd0c1a49ff3c8b24441cd4e2.js",
+    "service-worker.js": "/Progress-Bar/service-worker.js",
+    "static/css/main.2a3e40d3.chunk.css.map": "/Progress-Bar/static/css/main.2a3e40d3.chunk.css.map",
+    "static/js/2.5027ab54.chunk.js.LICENSE.txt": "/Progress-Bar/static/js/2.5027ab54.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6d74a99b.js",
+    "static/js/2.5027ab54.chunk.js",
+    "static/css/main.2a3e40d3.chunk.css",
+    "static/js/main.b9a222fe.chunk.js"
+  ]
+}
